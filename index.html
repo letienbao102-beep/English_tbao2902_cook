@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark" data-perf="high">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning English by tbao2902 — IELTS Quốc Tế A1–C2 Liquid Glass Studio</title>
+  <meta name="description" content="Hệ thống học tiếng Anh & luyện thi IELTS chuẩn quốc tế Cambridge & CEFR từ A1 đến C2 bởi tbao2902. Tích hợp 12.000 từ vựng, Flashcard, Luyện Nghe, Luyện Nói AI, Phòng Lab Luyện Đề và Bộ đếm Huy hiệu Chăm chỉ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Liquid Glass Mesh Orbs (Green & Brown) -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-orb orb-green-1"></div>
+    <div class="ambient-orb orb-brown-2"></div>
+    <div class="ambient-orb orb-mix-3"></div>
+  </div>
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-trigger-btn" id="btn-open-sidebar" aria-label="Mở thanh bên tùy chọn">
+        <span>☰</span>
+        <span>Menu Học Tập</span>
+      </button>
+      <div class="brand-identity" style="cursor:pointer" data-nav-view="home">
+        <div class="brand-logo">TB</div>
+        <div>
+          <div class="brand-title">Learning English by tbao2902</div>
+          <div class="brand-subtitle">Cambridge &amp; IELTS International Studio (A1 – C2)</div>
+        </div>
+      </div>
+    </div>
+    <!-- Quick CEFR/IELTS Level Bar -->
+    <div class="level-pill-bar" role="navigation" aria-label="Chọn nhanh cấp độ A1 đến C2">
+      <button class="level-pill active" data-level-pill="A1">A1</button>
+      <button class="level-pill" data-level-pill="A2">A2</button>
+      <button class="level-pill" data-level-pill="B1">B1</button>
+      <button class="level-pill" data-level-pill="B2">B2</button>
+      <button class="level-pill" data-level-pill="C1">C1</button>
+      <button class="level-pill" data-level-pill="C2">C2</button>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-sm" id="topbar-theme-btn" title="Chuyển đổi nền Tối hoặc Sáng">🌙 Nền Tối</button>
+      <button class="btn btn-sm" id="topbar-perf-btn" title="Hiệu chỉnh hiệu ứng Máy yếu hoặc Máy mạnh">💎 Máy Mạnh</button>
+      <button class="btn btn-primary btn-sm" id="topbar-auth-btn">🔐 Đăng nhập / Đăng ký</button>
+    </div>
+  </header>
+  <!-- Pop-Out Liquid Glass Sidebar Backdrop & Drawer (Style.docx) -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+  <aside class="sidebar-drawer" id="sidebar-drawer" aria-label="Thanh bên điều hướng chính">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="brand-identity">
+        <div class="brand-logo">TB</div>
+        <div>
+          <div class="brand-title" style="font-size:1rem">tbao2902 Studio</div>
+          <div class="brand-subtitle">Liquid Glass IELTS A1–C2</div>
+        </div>
+      </div>
+      <button class="btn btn-sm" id="btn-close-sidebar">✕ Đóng</button>
+    </div>
+    <!-- 1. Đăng nhập hoặc đăng ký tài khoản -->
+    <div id="sidebar-user-summary" class="glass-panel" style="padding:12px"></div>
+    <!-- 2. Trang chủ -->
+    <div>
+      <div class="sidebar-section-title">Điều Hướng Chính</div>
+      <div class="sidebar-nav-list">
+        <button class="sidebar-item active" data-nav-view="home">
+          <span>🏠 Trang chủ &amp; Tiến độ học tập</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+    <!-- 3. Các cấp bậc mà mình muốn học (A1, A2, B1, B2, C1, C2) -->
+    <div>
+      <div class="sidebar-section-title">Các Cấp Bậc Muốn Học (IELTS / CEFR)</div>
+      <div class="sidebar-level-grid">
+        <button class="sidebar-level-btn" data-sidebar-level="A1">A1<br/><small style="font-size:0.68rem;opacity:0.8">0.0–2.5+</small></button>
+        <button class="sidebar-level-btn" data-sidebar-level="A2">A2<br/><small style="font-size:0.68rem;opacity:0.8">3.0–4.0</small></button>
+        <button class="sidebar-level-btn" data-sidebar-level="B1">B1<br/><small style="font-size:0.68rem;opacity:0.8">4.5–5.5</small></button>
+        <button class="sidebar-level-btn" data-sidebar-level="B2">B2<br/><small style="font-size:0.68rem;opacity:0.8">6.0–6.5+</small></button>
+        <button class="sidebar-level-btn" data-sidebar-level="C1">C1<br/><small style="font-size:0.68rem;opacity:0.8">7.0–8.0</small></button>
+        <button class="sidebar-level-btn" data-sidebar-level="C2">C2<br/><small style="font-size:0.68rem;opacity:0.8">8.5–9.0</small></button>
+      </div>
+    </div>
+    <!-- 4. Mục chọn phần mà mình muốn học -->
+    <div>
+      <div class="sidebar-section-title">Mục Chọn Phần Muốn Học</div>
+      <div class="sidebar-nav-list">
+        <button class="sidebar-item" data-nav-view="lab-test">
+          <span>1. 🧪 Phòng Lab Test Trình Độ</span>
+          <span>→</span>
+        </button>
+        <button class="sidebar-item" data-nav-view="listening-room">
+          <span>2. 🎧 Phòng Luyện Nghe</span>
+          <span>→</span>
+        </button>
+        <button class="sidebar-item" data-nav-view="speaking-room">
+          <span>3. 🎙️ Phòng Luyện Nói AI</span>
+          <span>→</span>
+        </button>
+        <button class="sidebar-item" data-nav-view="exercise-room">
+          <span>4. ✍️ Phòng Làm Bài Tập Từng Trình Độ</span>
+          <span>→</span>
+        </button>
+        <button class="sidebar-item" data-nav-view="vocab-room">
+          <span>5. 📗 Sổ Tay 12.000 Từ &amp; Flashcard</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+    <!-- 5. Cài đặt & Chỉnh sửa nền tối/sáng, hiệu ứng máy yếu/mạnh -->
+    <div>
+      <div class="sidebar-section-title">Cài Đặt &amp; Tối Ưu Hệ Thống</div>
+      <div class="sidebar-nav-list">
+        <button class="sidebar-item" data-nav-view="settings">
+          <span>⚙️ Cài Đặt Hệ Thống &amp; Cá Nhân Hóa</span>
+          <span>→</span>
+        </button>
+        <button class="sidebar-item" id="sidebar-theme-btn">
+          <span>🌓 Chỉnh Sửa Nền Tối Hoặc Sáng</span>
+          <span>Đổi</span>
+        </button>
+        <button class="sidebar-item" id="sidebar-perf-btn">
+          <span>🚀 Hiệu Chỉnh Máy Yếu / Máy Mạnh</span>
+          <span>Đổi</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <!-- Main Dynamic Content Container -->
+  <main class="app-container" id="app-main-view"></main>
+  <!-- Authentication Modal (TASK 1: Giao diện đăng nhập & đăng ký mượt mà) -->
+  <div class="modal-overlay" id="auth-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div>
+          <span class="badge-chip">🔒 Bảo Mật Tài Khoản Học Tập</span>
+          <h2 id="auth-modal-title" style="font-size:1.35rem;margin-top:4px">Tài Khoản Học Tập tbao2902</h2>
+        </div>
+        <button class="btn btn-sm" id="btn-close-auth-modal">✕</button>
+      </div>
+      <!-- Smooth Tab Switch -->
+      <div class="subnav-tabs" style="margin-bottom:18px">
+        <button class="subnav-tab active" style="flex:1" id="tab-auth-login">Đăng Nhập</button>
+        <button class="subnav-tab" style="flex:1" id="tab-auth-register">Đăng Ký Tài Khoản</button>
+      </div>
+      <!-- Login Form -->
+      <form id="auth-form-login">
+        <div class="input-group">
+          <label for="login-username">Email hoặc tên đăng nhập</label>
+          <input type="text" id="login-username" class="glass-input" placeholder="Nhập email hoặc tên đăng nhập..." autocomplete="username" required />
+        </div>
+        <div class="input-group">
+          <label for="login-password">Mật khẩu (Có thể ẩn hoặc hiển thị)</label>
+          <div class="input-field-wrap">
+            <input type="password" id="login-password" class="glass-input" style="padding-right:76px" placeholder="Nhập mật khẩu..." required />
+            <button type="button" class="pw-toggle-btn" data-toggle-pw="login-password">👁️ Hiện</button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:6px">🚀 Đăng Nhập Vào Phòng Học</button>
+      </form>
+      <!-- Register Form -->
+      <form id="auth-form-register" style="display:none">
+        <div class="input-group">
+          <label for="reg-fullname">Họ và tên</label>
+          <input type="text" id="reg-fullname" class="glass-input" placeholder="Ví dụ: Nguyễn Văn A" required />
+        </div>
+        <div class="input-group">
+          <label for="reg-username">Email hoặc tên đăng nhập</label>
+          <input type="text" id="reg-username" class="glass-input" placeholder="Ví dụ: ban@gmail.com hoặc tbao2902_ielts" autocomplete="username" required />
+        </div>
+        <div class="input-group">
+          <label for="reg-password">Mật khẩu (Từ 6 ký tự trở lên, ẩn/hiển thị mượt mà)</label>
+          <div class="input-field-wrap">
+            <input type="password" id="reg-password" class="glass-input" style="padding-right:76px" minlength="6" placeholder="Tối thiểu 6 ký tự..." required />
+            <button type="button" class="pw-toggle-btn" data-toggle-pw="reg-password">👁️ Hiện</button>
+          </div>
+          <div class="pw-strength-bar">
+            <div class="pw-strength-fill" id="reg-pw-strength-fill"></div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="reg-confirm-password">Nhập lại mật khẩu</label>
+          <div class="input-field-wrap">
+            <input type="password" id="reg-confirm-password" class="glass-input" style="padding-right:76px" minlength="6" placeholder="Nhập lại mật khẩu..." required />
+            <button type="button" class="pw-toggle-btn" data-toggle-pw="reg-confirm-password">👁️ Hiện</button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-brown" style="width:100%;margin-top:6px">✨ Tạo Tài Khoản Mới</button>
+      </form>
+      <!-- User Privacy Protection Guarantee -->
+      <div class="formula-callout" style="margin-top:16px;font-size:0.8rem">
+        🛡️ <strong>Chính sách bảo vệ người dùng:</strong> Hệ thống sử dụng cơ chế lưu trữ Firebase &amp; Supabase kết hợp mã hóa cục bộ, <strong>cam kết tuyệt đối không tiết lộ thông tin tài khoản và dữ liệu cá nhân cho bên thứ 3</strong>.
+      </div>
+    </div>
+  </div>
+  <!-- Toast Stack -->
+  <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+  <!-- Cloud SDKs (Firebase Auth + Supabase) & cấu hình dịch vụ -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <!-- Modular Scripts -->
+  <script src="timer.js"></script>
+  <script src="tasks.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
